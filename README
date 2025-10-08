@@ -9,3 +9,11 @@ $env:VAGRANT_HOME = 'C:\VagrantHome'
 
 
 (Resolve-Path (Join-Path (Split-Path (Get-Command vagrant).Source -Parent) '..\embedded')).Path
+
+# Step 1 — create /usr/tmp if it exists
+New-Item -ItemType Directory -Force -Path "C:\Program Files (x86)\Vagrant\embedded\usr\tmp"
+
+# Step 2 — create /mingw64/usr/tmp if that folder exists too
+New-Item -ItemType Directory -Force -Path "C:\Program Files (x86)\Vagrant\embedded\mingw64\usr\tmp"
+
+
