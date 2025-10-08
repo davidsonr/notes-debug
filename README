@@ -10,6 +10,12 @@ $env:TEMP = 'C:\VTemp'
 [System.Environment]::SetEnvironmentVariable('TMP', 'C:\VTemp', 'User')
 [System.Environment]::SetEnvironmentVariable('TEMP', 'C:\VTemp', 'User')
 
+# Remove user-level Vagrant and temp overrides
+[System.Environment]::SetEnvironmentVariable('VAGRANT_HOME', $null, 'User')
+[System.Environment]::SetEnvironmentVariable('TMP', $null, 'User')
+[System.Environment]::SetEnvironmentVariable('TEMP', $null, 'User')
+
+
 
 
 echo $env:VAGRANT_HOME
