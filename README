@@ -1,6 +1,11 @@
 New-Item -ItemType Directory -Force -Path C:\VagrantHome
 New-Item -ItemType Directory -Force -Path C:\VTemp
 
+$env:VAGRANT_HOME = 'C:\VagrantHome'
+$env:TMP = 'C:\VTemp'
+$env:TEMP = 'C:\VTemp'
+
+
 [System.Environment]::SetEnvironmentVariable('VAGRANT_HOME', 'C:\VagrantHome', 'User')
 [System.Environment]::SetEnvironmentVariable('TMP', 'C:\VTemp', 'User')
 [System.Environment]::SetEnvironmentVariable('TEMP', 'C:\VTemp', 'User')
