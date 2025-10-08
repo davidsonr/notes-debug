@@ -16,4 +16,7 @@ New-Item -ItemType Directory -Force -Path "C:\Program Files (x86)\Vagrant\embedd
 # Step 2 — create /mingw64/usr/tmp if that folder exists too
 New-Item -ItemType Directory -Force -Path "C:\Program Files (x86)\Vagrant\embedded\mingw64\usr\tmp"
 
+& "C:\Program Files (x86)\Vagrant\embedded\bin\gem.bat" sources list
+
+
 
