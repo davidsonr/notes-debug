@@ -7,6 +7,9 @@ $env:TMP = 'C:\Temp'
 $env:TEMP = 'C:\Temp'
 $env:VAGRANT_HOME = 'C:\VagrantHome'
 
+vagrant plugin install vagrant-vsphere --plugin-clean-sources --plugin-source https://rubygems.org
+
+
 
 (Resolve-Path (Join-Path (Split-Path (Get-Command vagrant).Source -Parent) '..\embedded')).Path
 
